@@ -1,6 +1,7 @@
 package routes
 
 import (
+	"goods-inventory-restapi/database"
 	"goods-inventory-restapi/handlers"
 
 	"github.com/gin-gonic/gin"
@@ -15,6 +16,8 @@ func Init() {
 	v1.POST("/goods", handlers.StoreGoods)
 	v1.PUT("/goods/:id", handlers.UpdateGoods)
 	v1.DELETE("/goods/:id", handlers.DeleteGoods)
+
+	database.Init()
 
 	router.Run(":8080")
 }
