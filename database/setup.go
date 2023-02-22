@@ -9,7 +9,7 @@ import (
 
 var DB *gorm.DB
 
-func Connection() {
+func Init() {
 	db, err := gorm.Open(mysql.Open("root:@tcp(localhost:3306)/goods_inventory"))
 	if err != nil {
 		panic(err)
