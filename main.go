@@ -1,5 +1,7 @@
 package main
 
-func main() {
+import "goods-inventory-restapi/routes"
 
+func main() {
+	routes.Init()
 }
